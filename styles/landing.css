@@ -36,15 +36,22 @@ body.landing {
     padding: 2rem;
     text-align: center;
     opacity: 0;
-    -webkit-transform: scaleX(0.9) translateY(3rem);
-    -moz-transform: scaleX(0.9) translateY(3rem);
-    transform: scaleX(0.9) translateY(3rem);
-    -webkit-transition: all 0.25s ease-in-out;
-    -moz-transition: all 0.25s ease-in-out;
-    transition: all 0.25s ease-in-out;
+    -webkit-transform: scaleX(0.8) translateY(3rem) rotate(10deg);
+    -moz-transform: scaleX(0.8) translateY(3rem) rotate(10deg);
+    transform: scaleX(0.8) translateY(3rem) rotate(10deg);
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
     -webkit-transition-delay: 0.2s;
     -moz-transition-delay: 0.2s;
     transition-delay: 0.2s;
+}
+
+.point:hover {
+    color: aliceblue;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
 }
 
 .point  .point-title {
