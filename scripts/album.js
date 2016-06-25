@@ -28,6 +28,21 @@ var albumMarconi = {
     ]
 };
 
+var albumSmith = {
+    title: 'Moonlight in Vermont',
+    artist: 'Johnny Smith',
+    label: 'Capitol',
+    year: '1957',
+    albumArtUrl: 'assets/images/album_covers/05.png',
+    songs: [
+        { title: 'Flamenco Sketches', duration: '3:01' },
+        { title: 'All Blues', duration: '5:01' },
+        { title: 'Blue, blue, blue', duration: '3:31' },
+        { title: 'Gone, gone, gone', duration: '6:54' },
+        { title: 'Summertime', duration: '2:45' },
+    ]
+};
+
 
 var createSongRow = function(songNumber, songName, songLength){
     var template = 
@@ -67,3 +82,21 @@ var setCurrentAlbum = function(album) {
 window.onload = function() {
      setCurrentAlbum(albumPicasso);
 };
+
+document.getElementsByClassName("album-cover-art")[0].addEventListener("click", toggleInfo);
+
+
+var albumCounter = 0;
+
+function toggleInfo() {
+    var albumCollection = [albumPicasso, albumMarconi, albumSmith]; 
+    
+    if (albumCounter == albumCollection.length - 1){
+        //start over
+        albumCounter = 0;
+    } 
+    else{
+        albumCounter++;
+    }
+    setCurrentAlbum(albumCollection[albumCounter]);
+}
